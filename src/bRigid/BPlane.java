@@ -27,6 +27,7 @@ package bRigid;
 
 import javax.vecmath.Quat4f;
 import javax.vecmath.Vector3f;
+
 import com.bulletphysics.collision.shapes.CollisionShape;
 import com.bulletphysics.collision.shapes.StaticPlaneShape;
 import com.bulletphysics.dynamics.RigidBody;
@@ -41,12 +42,16 @@ public class BPlane {
 
 	protected CollisionShape planeShape;
 	public RigidBody rigidBody;
+	
+	Vector3f position;
+	Vector3f normal;
 /**
  * infinite plane placed with Vector3f position; orientation by Vector3f normal; 
  * normal direction points towards the expected collisions
  */
 	public BPlane(Vector3f position, Vector3f normal) {
-
+		this.position = position;
+		this.normal = normal;
 		CollisionShape planeShape = new StaticPlaneShape(normal, 1);
 		Transform transform = new Transform();
 		transform.origin.set(position);
@@ -54,6 +59,11 @@ public class BPlane {
 		DefaultMotionState groundMotionState = new DefaultMotionState(transform);
 		RigidBodyConstructionInfo groundConInfo = new RigidBodyConstructionInfo(0, groundMotionState, planeShape, new Vector3f(0, 0, 0));
 		rigidBody = new RigidBody(groundConInfo);
+	}
+	
+	
+	public void display() {
+		//PShape plane = createShape
 	}
 
 }

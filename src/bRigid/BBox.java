@@ -75,6 +75,10 @@ public class BBox extends BObject implements BInterface {
 			rigidBody = new RigidBody(rigidBodyConInfo);
 			setPosition(position);
 		}
+		
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
+		
 		drawToPShape(collisionShape);
 	}
 

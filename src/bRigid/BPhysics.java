@@ -129,11 +129,12 @@ public class BPhysics {
 	 * simulates over all containing objects and constraints
 	 */
 	public void update() {
-		// world.stepSimulation(1.0f / 60.0f, 8, 1.0f / 60.0f);
+		
 		updateBehaviors();
 		updateObjects();
 		float stepTime = getDeltaTimeMicroseconds();
-		world.stepSimulation(stepTime / 1000000f);
+		//world.stepSimulation(stepTime / 1000000f);
+		 world.stepSimulation(1.0f / 60.0f, 8, 1.0f / 60.0f);
 	}
 
 	private void updateObjects() {

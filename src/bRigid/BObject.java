@@ -117,6 +117,9 @@ public class BObject implements BInterface {
 		}
 		drawToPShape(collisionShape);
 		shapeScale = new Vector3f(1,1,1);
+		
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
 	}
 
 	/**
@@ -150,6 +153,9 @@ public class BObject implements BInterface {
 		
 		shapeScale = new Vector3f(1,1,1);
 		
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
+		
 	}
 	
 	
@@ -165,6 +171,9 @@ public class BObject implements BInterface {
 		rigidBody = new RigidBody(rigidBodyConInfo);
 		
 		shapeScale = new Vector3f(1,1,1);
+		
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
 	}
 
 	/**

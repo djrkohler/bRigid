@@ -67,6 +67,9 @@ public class BConvexHull extends BObject implements BInterface {
 			rigidBody = new RigidBody(rigidBodyConInfo);
 		}
 		drawToPShape(transform, collisionShape);
+		
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
 	}
 	
 	/**
@@ -99,6 +102,9 @@ public class BConvexHull extends BObject implements BInterface {
 			drawToPShape(collisionShape);
 		}
 		
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
+		
 	}
 	/**
 	 * takes a PShape as input and calculates its ConvexHull
@@ -120,6 +126,9 @@ public class BConvexHull extends BObject implements BInterface {
 		}
 		drawToPShape(transform, collisionShape);
 		//drawToPShape(collisionShape);
+		
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
 		
 	}
 

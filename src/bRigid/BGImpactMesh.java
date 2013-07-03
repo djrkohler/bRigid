@@ -69,7 +69,10 @@ public class BGImpactMesh extends BObject implements BInterface {
 		} else {
 			RigidBodyConstructionInfo rigidBodyConInfo = createConInfo(collisionShape, 0, null, false);
 			rigidBody = new RigidBody(rigidBodyConInfo);
-		}		
+		}
+		
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
 	}
 	
 		
@@ -102,7 +105,7 @@ public class BGImpactMesh extends BObject implements BInterface {
 	      new TriangleIndexVertexArray(
 	        faceCount, ind, 12, vertCount, ver, 12);
 	    GImpactMeshShape gims = new GImpactMeshShape(tiva);
-	    gims.setLocalScaling(new Vector3f(10,10,10));
+	    gims.setLocalScaling(new Vector3f(1f,1f,1f));
 	    gims.updateBound();
 	    GImpactCollisionAlgorithm.registerAlgorithm(
 	      (CollisionDispatcher)physics.world.getDispatcher());
@@ -118,7 +121,7 @@ public class BGImpactMesh extends BObject implements BInterface {
 	      for(PVector vv : cur) {
 	        float rnd = p5.random(212,255);
 				ret.fill(rnd, 255, rnd);
-				vv.mult(10.0f);
+				//vv.mult(.1f);
 	        ret.vertex(vv.x, vv.y, vv.z);
 	      }
 	    }

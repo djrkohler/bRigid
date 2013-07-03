@@ -35,6 +35,9 @@ public class BCompound extends BObject {
 			RigidBodyConstructionInfo rigidBodyConInfo = createConInfo(collisionShape, 0, position, false);
 			rigidBody = new RigidBody(rigidBodyConInfo);
 		}
+		
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
 	}
 
 	/**
@@ -66,8 +69,12 @@ public class BCompound extends BObject {
 			RigidBodyConstructionInfo rigidBodyConInfo = createConInfo(collisionShape, 0, null, false);
 			rigidBody = new RigidBody(rigidBodyConInfo);
 		}
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
+		
 		drawToPShape(transform, collisionShape);
 		// drawToPShape(collisionShape);
+		
 	}
 
 	public BCompound(PApplet p, float mass, ArrayList<BObject> shapes, boolean inertia) {
@@ -93,6 +100,10 @@ public class BCompound extends BObject {
 			RigidBodyConstructionInfo rigidBodyConInfo = createConInfo(collisionShape, 0, null, false);
 			rigidBody = new RigidBody(rigidBodyConInfo);
 		}
+		
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
+		
 		drawToPShape(transform, collisionShape);
 		// drawToPShape(collisionShape);
 	}
@@ -119,6 +130,8 @@ public class BCompound extends BObject {
 			RigidBodyConstructionInfo rigidBodyConInfo = createConInfo(collisionShape, 0, new Vector3f(), false);
 			rigidBody = new RigidBody(rigidBodyConInfo);
 		}
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
 
 		drawToPShape(transform, collisionShape);
 	}
@@ -134,6 +147,8 @@ public class BCompound extends BObject {
 
 		RigidBodyConstructionInfo rigidBodyConInfo = createConInfo(collisionShape, mass, new Vector3f(0, 0, 0), true);
 		rigidBody = new RigidBody(rigidBodyConInfo);
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
 
 	}
 
@@ -207,6 +222,7 @@ public class BCompound extends BObject {
 		return compo;
 	}
 
+	/*
 	public void display() {
 		if (displayShape != null) {
 			if (getMass() < 0) {
@@ -233,6 +249,6 @@ public class BCompound extends BObject {
 			}
 		}
 
-	}
+	}*/
 
 }

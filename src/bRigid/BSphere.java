@@ -58,6 +58,9 @@ public class BSphere extends BObject implements BInterface {
 			rigidBody = new RigidBody(rigidBodyConInfo);
 		}
 		drawToPShape(transform, collisionShape);
+		
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
 
 	}
 	/**
@@ -81,6 +84,9 @@ public class BSphere extends BObject implements BInterface {
 			rigidBody = new RigidBody(rigidBodyConInfo);
 		}
 		drawToPShape(transform, collisionShape);
+		
+		rigidBody.setFriction(.5f);
+		rigidBody.setRestitution(.5f);
 	}
 	/**
 	 * imports a stl-file, but uses its BoundingSphere for rigidBehavior
