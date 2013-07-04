@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>bRigid</title>
+<meta name="description" content="A library for the Processing programming environment" />
+<meta name="keywords" content="processing.org, library, simulation" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="ROBOTS" content="index,follow,archive" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="author" content="Daniel Koehler" />
+<meta name="Rating" content="General" />
+<meta name="revisit-after" content="7 Days" />
+<meta name="doc-class" content="Living Document" />
+<link rel="stylesheet" type="text/css" href="./stylesheet.css">
+</head>
+<body>
+	<div id="container">
+	
+		<div id="header">
+			<h1>bRigid</h1>
+		</div>
+		
+		<div id="menu" class="clear">
+			<ul>
+				<li><a href="#about">About</a> \ </li>
+				<li><a href="#download">Download</a> \ </li>
+				<li><a href="#download">Installation</a> \ </li>
+				<li><a href="#examples">Examples</a> \ </li>
+				<li><a href="./reference/index.html" target="_blank">Reference</a></li>
+				<!-- <li><a href="#demos">Demos</a> \ </li> -->				
+				<!-- <li><a href="#misc">Misc</a> \ </li> -->
+				<!-- <li><a href="#images">Images</a> \ </li> -->
+			</ul>
+		</div>
+		
+		<div id="content" class="clear">
+			
+			<div id="about">
+			<h2>bRigid</h2>
+			<p>
+			A library by <a href="http://www.lab-eds.org">Daniel Koehler</a> for the <a href="http://www.processing.org" target="_blank">Processing</a> programming environment.<br>
+			Last update, 07/04/2013.
+			</p>
+			<p>
+			bRigid provides classes for an easier handling of jBullet (rigid body engine) in Processing<br>
+			bRigid is thought as a kind of Processing port for the bullet physics simulation library written in C++. This library allows the interaction of rigid bodies in 3D. Geometry/ Shapes are build with Processing PShape Class, for convinient display and export(dxf) jBullet is a Java port of Bullet (c) 2008 Martin Dvorak http://jbullet.advel.cz/; Bullet Continuous Collision Detection and Physics Library (c) 2003-2013 Erwin Coumans http://www.bulletphysics.com/ and many thanks to the jBullet/processing examples of Giulio Piacentino and Richard Brauer  <br>
+			Feel free to replace this paragraph with a description of the library.<br>
+			Contributed libraries are developed, documented, and maintained by members of the Processing community. Further directions are included with each library. For feedback and support, please post to the Discourse. We strongly encourage all libraries to be open source, but not all of them are.
+			</p>
+			</div>
+			
+			
+			
+			<div id="download" class="clear">
+			<h2>Download</h2>
+			<p>
+			Download bRigid version 1.1 (2) in 
+			<a href="./download/bRigid-2.zip">.zip format</a>.
+			</p>
+			<h2>Installation</h2>
+			<p>
+			Unzip and put the extracted bRigid folder into the libraries folder of your Processing sketches. Reference and examples are included in the bRigid folder.
+			</p>
+			</div>	
+			
+			
+			<div id="resources">
+			<p><strong>Keywords</strong>. simulation</p>
+			<p><strong>Reference</strong>. Have a look at the javadoc reference <a href="./reference/index.html" target="_blank">here</a>. A copy of the reference is included in the .zip as well.</p>		
+			<p><strong>Source</strong>. The source code of bRigid is available at <a href="${source.url}">${source.host}</a>, and its repository can be browsed <a href="${source.repository}" target="_blank">here</a>.</p>			
+			</div>
+			
+			
+			<div id="examples" class="clear">
+			<h2>Examples</h2>
+			<p>Find a list of examples in the current distribution of bRigid, or have a look at them by following the links below.</p>
+			<ul>
+			<li><a href="examples/AttractionForce/AttractionForce.pde">AttractionForce</a></li> <li><a href="examples/Box/Box.pde">Box</a></li> <li><a href="examples/CollisionStates/CollisionStates.pde">CollisionStates</a></li> <li><a href="examples/Collisionevents/Collisionevents.pde">Collisionevents</a></li> <li><a href="examples/CompoundShape/CompoundShape.pde">CompoundShape</a></li> <li><a href="examples/ConstrainToGround/ConstrainToGround.pde">ConstrainToGround</a></li> <li><a href="examples/ConvexHull/ConvexHull.pde">ConvexHull</a></li> <li><a href="examples/GhostObjects/GhostObjects.pde">GhostObjects</a></li> <li><a href="examples/HingeConstraint/HingeConstraint.pde">HingeConstraint</a></li> <li><a href="examples/ImportObjAsConvexHull/ImportObjAsConvexHull.pde">ImportObjAsConvexHull</a></li> <li><a href="examples/PointJoint/PointJoint.pde">PointJoint</a></li> <li><a href="examples/RotateRigidBodies/RotateRigidBodies.pde">RotateRigidBodies</a></li> <li><a href="examples/ScaleRigidBodies/ScaleRigidBodies.pde">ScaleRigidBodies</a></li> <li><a href="examples/Sphere/Sphere.pde">Sphere</a></li> <li><a href="examples/SphereAsDummy/SphereAsDummy.pde">SphereAsDummy</a></li> 
+			</ul>
+			</div>
+			
+			
+			<div id="info">
+			<h2>Tested</h2>
+			<p>
+			<!-- on which platform has the library been tested? -->
+			<strong>Platform</strong> windows
+			
+			<!-- which processing version did you use for testing your library? -->
+			<br /><strong>Processing</strong> 2.01
+			
+			<!-- does your library depend on any other library or framework? -->
+			<br /><strong>Dependencies</strong> javax.vecmath, jbullet
+			</p>
+			</div>
+		
+			
+			<!-- use the demos section for a list of applets run in a browser. -->
+			<!--
+			<div id="demos" class="clear">
+				<h2>demos</h2>
+				<p>
+				find a list of online applet demos below.
+				
+				<ul>
+					<li><a href="./applets/demo/index.html">demo</a></li>
+				</ul>
+				</p>
+			</div>
+			-->
+			
+			<!-- use the misc section for other relevant information. Activate the link to the misc section in the menu above. -->
+			<!--
+			<div id="misc" class="clear">
+				<p></p>
+			</div>
+			-->
+			
+			<!-- use the images/screenshots section. Activate the link to the misc section in the menu above. -->
+			<!--
+			<div id="images" class="clear">
+			</div>
+			-->
+			
+			
+			<br class="clear" />
+		</div>
+		
+		<div id="footer">
+			<p>by Daniel Koehler, (C) 2013.</p>
+		</div>
+	</div>
+</body>
+</html>
